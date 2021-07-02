@@ -64,8 +64,9 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
-    public Boolean existsByName(String name) {
-        return repo.existsByNameIgnoreCase(name);
+    public Boolean existsByName(String name, Long projectId) {
+        System.out.println("OK" + projectId);
+        return repo.existsByNameIgnoreCaseAndProject_Id(name, projectId);
     }
 
     private Task setIdAndNameInObjectVal(Task ob) {

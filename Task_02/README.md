@@ -71,8 +71,8 @@ Req. Header  : createdBy   ,  createdByEmp
 Request Body Sample
 {
    "name"        : "Project 1",
-   "description" : "Description"
-   "statusId"    : 1
+   "description" : "Description",
+   "statusId"    : 1,
    "active"      : true
 }
 ```
@@ -127,8 +127,8 @@ Req. Header  : createdBy   ,  createdByEmp
 Request Body Sample
 {
    "name"        : "Task 1",
-   "projectId"   : 1
-   "statusId"    : 1
+   "projectId"   : 1,
+   "statusId"    : 1,
    "active"      : true
 }
 ```
@@ -161,10 +161,11 @@ Req. Header: updatedBy   ,  updatedByEmp
 6. Task > Exists by name
 ```text
 METHOD      : Get
-URI         : /api/pmt/task/exists/byName?name=name
-Req. Ex.    : {base}/api/pmt/task/exists/byName?name=name
+URI         : /api/pmt/task/exists/byNameAndProjectId?name=name&projectId=1
+Req. Ex.    : {base}/api/pmt/task/exists/byNameAndProjectId?name=name&projectId=1
 ``` 
 
+>> Note: In this project I handle delete mechanism by Active Flag. If Active false then the task is Deleted. 
 
 
 

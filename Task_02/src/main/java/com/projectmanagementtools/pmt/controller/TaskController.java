@@ -89,8 +89,8 @@ public class TaskController {
      *
      * @return
      *************************************************************************/
-    @GetMapping("/exists/byName")
-    public Boolean existsByName(@RequestParam String name) {
-        return service.existsByName(name);
+    @GetMapping("/exists/byNameAndProjectId")
+    public Boolean existsByName(@RequestParam String name, @RequestParam Long projectId) {
+        return service.existsByName(name, projectId);
     }
 }

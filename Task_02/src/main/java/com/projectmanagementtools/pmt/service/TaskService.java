@@ -15,5 +15,5 @@ public interface TaskService {
 
     Task update(Task ob, HttpServletResponse rs);
 
-    Boolean existsByName(String name);
+    Boolean existsByName(String name, Long projectId);
 }

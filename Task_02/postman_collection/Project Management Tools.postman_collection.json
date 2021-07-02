@@ -1,0 +1,661 @@
+{
+	"info": {
+		"_postman_id": "b380be90-d127-4dec-9520-f60449fe3e67",
+		"name": "Project Management Tools",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Status - Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "createdBy",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "createdByEmp",
+						"value": "Hasan",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Active\",\r\n    \"active\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/pmt/api/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"pmt",
+						"api",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status - Get All Active Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/pmt/api/status/getAll/active?page=0&pageSize=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"pmt",
+						"api",
+						"status",
+						"getAll",
+						"active"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status - Get All Inactive Status (Delete)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/pmt/api/status/getAll/inactive?page=0&pageSize=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"pmt",
+						"api",
+						"status",
+						"getAll",
+						"inactive"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status - Get By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/pmt/api/status/get/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"pmt",
+						"api",
+						"status",
+						"get",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status - Get All active drop down Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/pmt/api/status/getAll/active/dropdown",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"pmt",
+						"api",
+						"status",
+						"getAll",
+						"active",
+						"dropdown"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status - Exists by Status Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/pmt/api/status/exists/byName?name=Active",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"pmt",
+						"api",
+						"status",
+						"exists",
+						"byName"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Active"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status - Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "updatedBy",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "updatedByEmp",
+						"value": "Hasan Mahmud",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"version\": 0,\r\n    \"createdAt\": \"2021-07-02T22:20:14.415863\",\r\n    \"createdBy\": 1,\r\n    \"createdByEmp\": \"Hasan (ID:1)\",\r\n    \"name\": \"Cancelled\",\r\n    \"active\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/pmt/api/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"pmt",
+						"api",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Project - Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "createdBy",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "createdByEmp",
+						"value": "Hasan Mahmud",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Project 1\",\r\n    \"description\": \"Description\",\r\n    \"statusId\": 1,\r\n    \"active\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/pmt/api/project",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"pmt",
+						"api",
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Project - Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "updatedBy",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "updatedByEmp",
+						"value": "Hasan Mahmud",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"version\": 0,\r\n    \"createdAt\": \"2021-07-02T22:37:45.3920155\",\r\n    \"createdBy\": 1,\r\n    \"createdByEmp\": \"Hasan Mahmud (ID:1)\",\r\n    \"name\": \"Project Agile\",\r\n    \"description\": \"Description\",\r\n    \"statusId\": 1,\r\n    \"active\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/pmt/api/project",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"pmt",
+						"api",
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Project - Get All Active Project",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/pmt/api/project/getAll/active?page=0&pageSize=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"pmt",
+						"api",
+						"project",
+						"getAll",
+						"active"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Project - Get All Inactive Project (Delete)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/pmt/api/project/getAll/inactive?page=0&pageSize=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"pmt",
+						"api",
+						"project",
+						"getAll",
+						"inactive"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Project - Get By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/pmt/api/project/get/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"pmt",
+						"api",
+						"project",
+						"get",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Project - Get All active drop down Project",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/pmt/api/project/getAll/active/dropdown",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"pmt",
+						"api",
+						"project",
+						"getAll",
+						"active",
+						"dropdown"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Project - Exists by Project Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/pmt/api/project/exists/byName?name=Project Agile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"pmt",
+						"api",
+						"project",
+						"exists",
+						"byName"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Project Agile"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task - Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "createdBy",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "createdByEmply",
+						"value": "Hasan Mahmud",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Task 1\",\r\n    \"projectId\": 1,\r\n    \"statusId\": 1,\r\n    \"active\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/pmt/api/task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"pmt",
+						"api",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task - Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "updatedBy",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "updatedByEmp",
+						"value": "Hasan",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"version\": 0,\r\n    \"createdAt\": \"2021-07-02T22:45:00.996716\",\r\n    \"createdBy\": 1,\r\n    \"createdByEmp\": \"null (ID:1)\",\r\n    \"name\": \"Sprint 1\",\r\n    \"statusId\": 1,\r\n    \"projectId\": 1,\r\n    \"active\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/pmt/api/task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"pmt",
+						"api",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task - Get All Active Task",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/pmt/api/task/getAll/active?page=0&pageSize=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"pmt",
+						"api",
+						"task",
+						"getAll",
+						"active"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task - Get All Inactive Task(Delete)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/pmt/api/task/getAll/inactive?page=0&pageSize=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"pmt",
+						"api",
+						"task",
+						"getAll",
+						"inactive"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task - Get By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/pmt/api/task/get/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"pmt",
+						"api",
+						"task",
+						"get",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task - Exists by Task Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/pmt/api/task/exists/byNameAndProjectId?name=Sprint 1&projectId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"pmt",
+						"api",
+						"task",
+						"exists",
+						"byNameAndProjectId"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Sprint 1"
+						},
+						{
+							"key": "projectId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
