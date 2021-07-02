@@ -1,5 +1,8 @@
+## Project Management Application
+A simple Project Management Application with Java and Spring Boot.
 
-# API Details
+### API Details
+> Base URL: http://localhost:8090/
 
 > Status API
 
@@ -53,7 +56,7 @@ Req. Ex.    : {base}/api/pmt/status/getAll/active/dropdown
 ```text
 METHOD      : Get
 URI         : /api/pmt/status/exists/byName?name=name
-Req. Ex.    : {base/api/pmt/status/exists/byName?name=name
+Req. Ex.    : {base}/api/pmt/status/exists/byName?name=name
 ```
 > Project API
 
@@ -109,7 +112,7 @@ Req. Ex.    : {base}/api/pmt/project/getAll/active/dropdown
 ```text
 METHOD      : Get
 URI         : /api/pmt/project/exists/byName?name=name
-Req. Ex.    : {base/api/pmt/project/exists/byName?name=name
+Req. Ex.    : {base}/api/pmt/project/exists/byName?name=name
 ```
 > Task API
 
@@ -159,7 +162,7 @@ Req. Header: updatedBy   ,  updatedByEmp
 ```text
 METHOD      : Get
 URI         : /api/pmt/task/exists/byName?name=name
-Req. Ex.    : {base/api/pmt/task/exists/byName?name=name
+Req. Ex.    : {base}/api/pmt/task/exists/byName?name=name
 ``` 
 
 
